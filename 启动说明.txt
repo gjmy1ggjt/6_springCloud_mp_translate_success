@@ -1,0 +1,16 @@
+启动顺序
+
+1，注册中心  cloud -> tx-manager -> 生产者，消费者
+
+问题
+
+@LcnTransaction
+
+1，lcn事务注解 在调用的service里都要添加 生产者 消费者都要添加
+
+
+2，不能在一个controller 里 调用二个service 那么 分布式事务会不起作用
+
+
+3，热部署会导致 tx-manager 报错 事务无效 TransactionUnit can not cast TransactionUnit 
+
